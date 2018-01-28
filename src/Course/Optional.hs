@@ -80,7 +80,7 @@ bindOptional _ Empty    = Empty
   Optional a
   -> Optional a
   -> Optional a
-(<+>) o@(Full x) _ = o
+(<+>) o@(Full _) _ = o
 (<+>) Empty      y = y
 
 applyOptional :: Optional (a -> b) -> Optional a -> Optional b
